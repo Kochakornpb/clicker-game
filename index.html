@@ -18,6 +18,8 @@
             width: 200px;
             padding-bottom: 10px;
             margin-left: auto;
+            margin-top: 40px;
+            margin-bottom: 250px;
             border-radius: 10px;
             margin-right: auto;
             color: beige;
@@ -30,11 +32,13 @@
 
     <h1 class="name-game" style="text-align: center;font-family: 'Pacifico', cursive;">God of finger</h1>
 
-    <div class="canvas" id="player1" style="float:left;margin-left: 10%;">
-        <p id="score1" class="score">0</p>
+    <div class="canvas" id="player1" style="float:left;margin-left: 8%;">
+        <p class="score">Player 1 Score : &nbsp; </p><p id="score1" class="score"> &nbsp; 0</p>
 
-        <div id="clap" class="clap-container"><img class="imgclick" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ3SURBVGhD7VhtiFRVGJ4ygiDDoEIjc9fde0cCFUzCj/AL/NEaRuzqj8UIoz9JIv7QDBU/IRH8ITijjkuSOzN3dsscSHNXaxdXamHZrUUjvzIiQSIE3Tt+4cd5fc6dd/TO+I7InbPuFPPAwx3OOe953ve97/mYG6qgggr+xxgbzbxSHclsqo64v1RHM1c96t9oq93uvszDyhNwdkFVNJPBkyRWRTJu9Q63gYeXF6p2ZhYi00pyPI/eGLeezcoDumy87PoctaKXqTHWQfWxn7zf/j68pYGyKic4tNnv4Ju7/qYz8XeIDrxLlH6Pzsfn0uxdv+cFAW5g86EHyqLf71xs72ai9pVEfSey7NhGv8Xn09io6wvA/ZXNhx6F5dPX3EDUfehBAF1fEjk2LWlK3x+jbdh86FEYwNF9HxP98AXRz2mithVwfpwXwOl4HdVEB8ovAF0O/gA+2nPYc1jip3u+5XHBSkglww0qafWAfyrH2qGaa1/gruDwDi5fAJr98ffFAM5icXtvIZJZz+aPDTg9r3A+BPE1dweHtI1+GDuSJ+TnsqaW6/Zu9yU2LwpqfeNZlbKnI+uTiUJPIYC0NB8l7LfZJDj0CVt4kHmLWRB0k5Mu0LrQ02wqQsXD43WZ5GyQ6ePKsQ/55/H1/chmpUGfsPqQygXwQezoQ2I5Kqe2kc1EkGP1PmSTtDsL23JUKWsGm5YGXRqo740Ipk+XVe+++juiYNI6Ta2hYdqGOmc+g+x+Age/wnOt2v/6qCI2tzHmryJ9nZ4DpgHBOZKgJvoWcW1/n99unURZ/ONvu9+Xsrukdk2slaUsaxZw9JgsaJ0pFiD6OuR2W2mKfY59mSXNgpzwLElQE5neWaT9Fhy6K/U9iqrFXsiyZqFrVBR07BvoEzMajFYvS5qF3iVkQfNUqfBsljULvV9LgqaJNdLFkmahT0xJcDCoEtZbLGsWqPkjkqBp4m1HWNIslBOeJgmaJsqonyXNA9lpk0SNMmlfYTnzUKnaKaKoSQ5mABrY+/OuD6aJt3yKpQYHepeQhE0RATSzVHDgcvUqFtNWcD8lrS14ztF/Urhb70gHJXETRILqWCYY4OhI5Yy7QO34U3+siehAXXZixx4Av8E6WIwymoegDF4jssS8PfqWy64EAyZZQ+2rHnxa0d+JCoVwWTMdAOa7hmvLRHYjOOBczPselAvg4GJR0CShiYtheD67UBow2WfUtjzrfE83UcsEUdQUkflzKlEzleVLByXGv4hsnKPDS4m+axRFTRCO/4sdZ4Vqee05ljYH5dSMhkACArck8VKIOS9hnX2OzeJ5lhs8eG9D7zrYNhHQTcmhxyUcvwiuVunwcJ7+yYL2jhmBIBYhe2m96CQnJcKmWyfBf44MOXQWKRVe4O1Y+CuYLQv7Dp5X8fwDh18rnF+lP3KxSQUVVFDBfx6h0D2eoAOlZUuRhAAAAABJRU5ErkJggg=="></div>
-
+        <div id="clap" class="clap-container two">
+            <!-- <img class="imgclick" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ3SURBVGhD7VhtiFRVGJ4ygiDDoEIjc9fde0cCFUzCj/AL/NEaRuzqj8UIoz9JIv7QDBU/IRH8ITijjkuSOzN3dsscSHNXaxdXamHZrUUjvzIiQSIE3Tt+4cd5fc6dd/TO+I7InbPuFPPAwx3OOe953ve97/mYG6qgggr+xxgbzbxSHclsqo64v1RHM1c96t9oq93uvszDyhNwdkFVNJPBkyRWRTJu9Q63gYeXF6p2ZhYi00pyPI/eGLeezcoDumy87PoctaKXqTHWQfWxn7zf/j68pYGyKic4tNnv4Ju7/qYz8XeIDrxLlH6Pzsfn0uxdv+cFAW5g86EHyqLf71xs72ai9pVEfSey7NhGv8Xn09io6wvA/ZXNhx6F5dPX3EDUfehBAF1fEjk2LWlK3x+jbdh86FEYwNF9HxP98AXRz2mithVwfpwXwOl4HdVEB8ovAF0O/gA+2nPYc1jip3u+5XHBSkglww0qafWAfyrH2qGaa1/gruDwDi5fAJr98ffFAM5icXtvIZJZz+aPDTg9r3A+BPE1dweHtI1+GDuSJ+TnsqaW6/Zu9yU2LwpqfeNZlbKnI+uTiUJPIYC0NB8l7LfZJDj0CVt4kHmLWRB0k5Mu0LrQ02wqQsXD43WZ5GyQ6ePKsQ/55/H1/chmpUGfsPqQygXwQezoQ2I5Kqe2kc1EkGP1PmSTtDsL23JUKWsGm5YGXRqo740Ipk+XVe+++juiYNI6Ta2hYdqGOmc+g+x+Age/wnOt2v/6qCI2tzHmryJ9nZ4DpgHBOZKgJvoWcW1/n99unURZ/ONvu9+Xsrukdk2slaUsaxZw9JgsaJ0pFiD6OuR2W2mKfY59mSXNgpzwLElQE5neWaT9Fhy6K/U9iqrFXsiyZqFrVBR07BvoEzMajFYvS5qF3iVkQfNUqfBsljULvV9LgqaJNdLFkmahT0xJcDCoEtZbLGsWqPkjkqBp4m1HWNIslBOeJgmaJsqonyXNA9lpk0SNMmlfYTnzUKnaKaKoSQ5mABrY+/OuD6aJt3yKpQYHepeQhE0RATSzVHDgcvUqFtNWcD8lrS14ztF/Urhb70gHJXETRILqWCYY4OhI5Yy7QO34U3+siehAXXZixx4Av8E6WIwymoegDF4jssS8PfqWy64EAyZZQ+2rHnxa0d+JCoVwWTMdAOa7hmvLRHYjOOBczPselAvg4GJR0CShiYtheD67UBow2WfUtjzrfE83UcsEUdQUkflzKlEzleVLByXGv4hsnKPDS4m+axRFTRCO/4sdZ4Vqee05ljYH5dSMhkACArck8VKIOS9hnX2OzeJ5lhs8eG9D7zrYNhHQTcmhxyUcvwiuVunwcJ7+yYL2jhmBIBYhe2m96CQnJcKmWyfBf44MOXQWKRVe4O1Y+CuYLQv7Dp5X8fwDh18rnF+lP3KxSQUVVFDBfx6h0D2eoAOlZUuRhAAAAABJRU5ErkJggg==">
+            -->
+        </div>
         <div id="particles" class="particles-container">
             <div class="triangle">
                 <div class="square"></div>
@@ -125,15 +129,16 @@
     </div>
 
     <div class="start-game">
-        <button id="start-button" class="clap-container" style="float:left;">START</button>
+        <button id="start-button" class="clap-container" style="float:left;margin-left: 1%;">START</button>
     </div>
     
 
-    <div class="canvas" id="player2" style="float: left;margin-left: 10%;margin-right: 0px;">
-        <p id="score2" class="score">0</p>
-
-        <div id="clap1" class="clap-container"><img class="imgclick" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ3SURBVGhD7VhtiFRVGJ4ygiDDoEIjc9fde0cCFUzCj/AL/NEaRuzqj8UIoz9JIv7QDBU/IRH8ITijjkuSOzN3dsscSHNXaxdXamHZrUUjvzIiQSIE3Tt+4cd5fc6dd/TO+I7InbPuFPPAwx3OOe953ve97/mYG6qgggr+xxgbzbxSHclsqo64v1RHM1c96t9oq93uvszDyhNwdkFVNJPBkyRWRTJu9Q63gYeXF6p2ZhYi00pyPI/eGLeezcoDumy87PoctaKXqTHWQfWxn7zf/j68pYGyKic4tNnv4Ju7/qYz8XeIDrxLlH6Pzsfn0uxdv+cFAW5g86EHyqLf71xs72ai9pVEfSey7NhGv8Xn09io6wvA/ZXNhx6F5dPX3EDUfehBAF1fEjk2LWlK3x+jbdh86FEYwNF9HxP98AXRz2mithVwfpwXwOl4HdVEB8ovAF0O/gA+2nPYc1jip3u+5XHBSkglww0qafWAfyrH2qGaa1/gruDwDi5fAJr98ffFAM5icXtvIZJZz+aPDTg9r3A+BPE1dweHtI1+GDuSJ+TnsqaW6/Zu9yU2LwpqfeNZlbKnI+uTiUJPIYC0NB8l7LfZJDj0CVt4kHmLWRB0k5Mu0LrQ02wqQsXD43WZ5GyQ6ePKsQ/55/H1/chmpUGfsPqQygXwQezoQ2I5Kqe2kc1EkGP1PmSTtDsL23JUKWsGm5YGXRqo740Ipk+XVe+++juiYNI6Ta2hYdqGOmc+g+x+Age/wnOt2v/6qCI2tzHmryJ9nZ4DpgHBOZKgJvoWcW1/n99unURZ/ONvu9+Xsrukdk2slaUsaxZw9JgsaJ0pFiD6OuR2W2mKfY59mSXNgpzwLElQE5neWaT9Fhy6K/U9iqrFXsiyZqFrVBR07BvoEzMajFYvS5qF3iVkQfNUqfBsljULvV9LgqaJNdLFkmahT0xJcDCoEtZbLGsWqPkjkqBp4m1HWNIslBOeJgmaJsqonyXNA9lpk0SNMmlfYTnzUKnaKaKoSQ5mABrY+/OuD6aJt3yKpQYHepeQhE0RATSzVHDgcvUqFtNWcD8lrS14ztF/Urhb70gHJXETRILqWCYY4OhI5Yy7QO34U3+siehAXXZixx4Av8E6WIwymoegDF4jssS8PfqWy64EAyZZQ+2rHnxa0d+JCoVwWTMdAOa7hmvLRHYjOOBczPselAvg4GJR0CShiYtheD67UBow2WfUtjzrfE83UcsEUdQUkflzKlEzleVLByXGv4hsnKPDS4m+axRFTRCO/4sdZ4Vqee05ljYH5dSMhkACArck8VKIOS9hnX2OzeJ5lhs8eG9D7zrYNhHQTcmhxyUcvwiuVunwcJ7+yYL2jhmBIBYhe2m96CQnJcKmWyfBf44MOXQWKRVe4O1Y+CuYLQv7Dp5X8fwDh18rnF+lP3KxSQUVVFDBfx6h0D2eoAOlZUuRhAAAAABJRU5ErkJggg=="></div>
-
+    <div class="canvas" id="player2" style="float: left;margin-left: 8%;margin-right: 0px;">
+        <p class="score">Player 2 Score : &nbsp; </p><p id="score2" class="score"> &nbsp; 0</p>
+        <div id="clap1" class="clap-container tuksin">
+            <!-- <img class="imgclick" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ3SURBVGhD7VhtiFRVGJ4ygiDDoEIjc9fde0cCFUzCj/AL/NEaRuzqj8UIoz9JIv7QDBU/IRH8ITijjkuSOzN3dsscSHNXaxdXamHZrUUjvzIiQSIE3Tt+4cd5fc6dd/TO+I7InbPuFPPAwx3OOe953ve97/mYG6qgggr+xxgbzbxSHclsqo64v1RHM1c96t9oq93uvszDyhNwdkFVNJPBkyRWRTJu9Q63gYeXF6p2ZhYi00pyPI/eGLeezcoDumy87PoctaKXqTHWQfWxn7zf/j68pYGyKic4tNnv4Ju7/qYz8XeIDrxLlH6Pzsfn0uxdv+cFAW5g86EHyqLf71xs72ai9pVEfSey7NhGv8Xn09io6wvA/ZXNhx6F5dPX3EDUfehBAF1fEjk2LWlK3x+jbdh86FEYwNF9HxP98AXRz2mithVwfpwXwOl4HdVEB8ovAF0O/gA+2nPYc1jip3u+5XHBSkglww0qafWAfyrH2qGaa1/gruDwDi5fAJr98ffFAM5icXtvIZJZz+aPDTg9r3A+BPE1dweHtI1+GDuSJ+TnsqaW6/Zu9yU2LwpqfeNZlbKnI+uTiUJPIYC0NB8l7LfZJDj0CVt4kHmLWRB0k5Mu0LrQ02wqQsXD43WZ5GyQ6ePKsQ/55/H1/chmpUGfsPqQygXwQezoQ2I5Kqe2kc1EkGP1PmSTtDsL23JUKWsGm5YGXRqo740Ipk+XVe+++juiYNI6Ta2hYdqGOmc+g+x+Age/wnOt2v/6qCI2tzHmryJ9nZ4DpgHBOZKgJvoWcW1/n99unURZ/ONvu9+Xsrukdk2slaUsaxZw9JgsaJ0pFiD6OuR2W2mKfY59mSXNgpzwLElQE5neWaT9Fhy6K/U9iqrFXsiyZqFrVBR07BvoEzMajFYvS5qF3iVkQfNUqfBsljULvV9LgqaJNdLFkmahT0xJcDCoEtZbLGsWqPkjkqBp4m1HWNIslBOeJgmaJsqonyXNA9lpk0SNMmlfYTnzUKnaKaKoSQ5mABrY+/OuD6aJt3yKpQYHepeQhE0RATSzVHDgcvUqFtNWcD8lrS14ztF/Urhb70gHJXETRILqWCYY4OhI5Yy7QO34U3+siehAXXZixx4Av8E6WIwymoegDF4jssS8PfqWy64EAyZZQ+2rHnxa0d+JCoVwWTMdAOa7hmvLRHYjOOBczPselAvg4GJR0CShiYtheD67UBow2WfUtjzrfE83UcsEUdQUkflzKlEzleVLByXGv4hsnKPDS4m+axRFTRCO/4sdZ4Vqee05ljYH5dSMhkACArck8VKIOS9hnX2OzeJ5lhs8eG9D7zrYNhHQTcmhxyUcvwiuVunwcJ7+yYL2jhmBIBYhe2m96CQnJcKmWyfBf44MOXQWKRVe4O1Y+CuYLQv7Dp5X8fwDh18rnF+lP3KxSQUVVFDBfx6h0D2eoAOlZUuRhAAAAABJRU5ErkJggg==">
+            -->
+        </div>
         <div id="user1-particles" class="particles-container">
             <div class="triangle">
                 <div class="square"></div>

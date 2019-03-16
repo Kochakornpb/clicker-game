@@ -1,3 +1,17 @@
+.two {
+    background: url("./two.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;    
+}
+
+.tuksin {
+    background: url("./tuksin.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;    
+}
+
 .start-game {
     display: flex;
     float: left;
@@ -10,7 +24,11 @@
 }
 
 .score {
+    margin-top: -400px;
     margin-bottom: 120px;
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: beige;
 }
 
 .triangle {
@@ -77,12 +95,12 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    height: 150px;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 50%;
     z-index: 2;
-    background: white;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -90,7 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 320px;
     height: 300px;
     position: relative;
 }
