@@ -1,3 +1,29 @@
+.winner {
+    border-style: dashed;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.start-style {
+    float: left;
+    margin-left: 1%;
+    font-family: 'Pacifico', cursive;
+    width: 214px;
+    height: 94px;
+    border-radius: 10px;
+    color: white;
+    background-color: #00000066;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
 .two {
     background: url("./two.jpg");
     background-size:     cover;                      /* <------ */
@@ -18,7 +44,7 @@
     margin-left: 10%;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 350px;
     height: 300px;
     position: relative;
 }

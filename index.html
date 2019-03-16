@@ -12,17 +12,33 @@
         }
 
         .name-game {
-            text-align: center;
+         /*   text-align: center;
             font-family: 'Pacifico', cursive;
+            height: 56px;
+            width: 300px;
+            font-size: 40px;
+            padding-bottom: 30px;
+            padding-top: 10px;
+            margin-bottom: 230px;
             border-style: dashed;
-            width: 200px;
-            padding-bottom: 10px;
             margin-left: auto;
             margin-top: 40px;
-            margin-bottom: 250px;
             border-radius: 10px;
-            margin-right: auto;
-            color: beige;
+            margin-right: auto; */
+            color: #e4e40c; 
+            text-decoration: underline;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            height: 56px;
+            width: 300px;
+            font-size: 40px;
+            padding-bottom: 30px;
+            padding-top: 10px;
+            margin-bottom: 230px;
+            margin-left: auto;
+            margin-top: 40px;
+            border-radius: 10px;
+            margin-right: auto; 
         }
     </style>
     <link rel="stylesheet" type="text/css" href="button.css">
@@ -129,7 +145,8 @@
     </div>
 
     <div class="start-game">
-        <button id="start-button" class="clap-container" style="float:left;margin-left: 1%;">START</button>
+        <p class="score" id="player-win"></p>
+        <button id="start-button" class="start-style" style="float:left;margin-left: 1%;">Start Here</button>
     </div>
     
 
@@ -237,6 +254,8 @@
 
         document.getElementById('start-button').onclick = function () { 
             if(time!=4){return 0;}
+            document.getElementById('player-win').classList.remove('winner');
+            document.getElementById('player-win').innerText = "";
             const timer = document.getElementById('start-button');
             timeLoop = setInterval(function(){ 
                 if(time==1){
@@ -262,11 +281,20 @@
                     clearInterval(timeLoop);
 
                     if(score1 > score2){
-                        alert("Player1 win")
+                        //alert("Player1 win")
+                        var winnerObj = document.getElementById('player-win');
+                        winnerObj.classList.add('winner');
+                        winnerObj.innerText = "Player 1 is Winer";
                     }else if(score2 > score1){
-                        alert("Player2 win")
+                        var winnerObj = document.getElementById('player-win');
+                        winnerObj.classList.add('winner');
+                        winnerObj.innerText = "Player 2 is Winer"
+                        //alert("Player2 win")
                     }else{
-                        alert("Draw")
+                        //alert("Draw")
+                        var winnerObj = document.getElementById('player-win');
+                        winnerObj.classList.add('winner');
+                        winnerObj.innerText = "Draw"
                     }
                     
                     time = 4;
