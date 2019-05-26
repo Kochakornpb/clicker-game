@@ -26,14 +26,14 @@
 }
 
 .two {
-    background: url("./two.jpg");
+    background: url("tom2.jpg");
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;    
 }
 
 .tuksin {
-    background: url("./tuksin.jpg");
+    background: url("jerry.jpg");
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;    

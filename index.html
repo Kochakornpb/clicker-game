@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <style>
         body {
-            background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+            background-image: url("http://i.imgur.com/jXVjf.jpg");
             z-index: 0;
         }
 
@@ -45,7 +45,6 @@
 </head>
 
 <body>
-
     <h1 class="name-game" style="text-align: center;font-family: 'Pacifico', cursive;">God of finger</h1>
 
     <div class="canvas" id="player1" style="float:left;margin-left: 8%;">
@@ -347,7 +346,7 @@
             }   
         });
 
-        document.body.addEventListener('keydown', function(e) {
+        document.body.addEventListener('keyup', function(e) {
             if(!start){ return 0; }
             if(e.keyCode == 83){
                 score1++;
